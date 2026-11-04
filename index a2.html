@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coffee House | Assignment 3</title>
+    <link rel="stylesheet" href="style 2.css">
+</head>
+<body>
+
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">☕ The Coffee House</div>
+            <button id="theme-button" class="theme-button">☾ Toggle Theme</button>
+        </nav>
+
+        <div class="hero-content">
+            <p class="small-heading">FRESHLY BREWED, MADE WITH LOVE</p>
+            <h1>Your Daily Cup of <span>Happiness.</span></h1>
+            <p>Good coffee, delicious treats and a cozy place to relax.</p>
+            <a href="#menu" class="hero-link">Explore Our Menu ↓</a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Task 8: Opening Status -->
+        <div class="status-bar">
+            <div>
+                <strong>Welcome to our cafe!</strong>
+                <p>Fresh coffee is always a good idea.</p>
+            </div>
+            <span id="status" class="status-badge">Checking status...</span>
+        </div>
+
+        <!-- Task 7: Category Filter and Task 2: Row Highlighting -->
+        <section id="menu" class="section">
+            <div class="section-heading">
+                <p class="small-heading">TASTE SOMETHING SPECIAL</p>
+                <h2>Our Popular Menu</h2>
+                <p>Choose your favorite drink or treat.</p>
+            </div>
+
+            <div class="filters">
+                <button class="filter-button active" data-filter="All">All Items</button>
+                <button class="filter-button" data-filter="Drinks">☕ Drinks</button>
+                <button class="filter-button" data-filter="Pastries">🥐 Pastries</button>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Menu Item</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="menu-row" data-category="Drinks">
+                            <td>☕ Espresso</td>
+                            <td><span class="category">Drinks</span></td>
+                            <td>$3</td>
+                        </tr>
+                        <tr class="menu-row" data-category="Pastries">
+                            <td>🥐 Butter Croissant</td>
+                            <td><span class="category">Pastries</span></td>
+                            <td>$4</td>
+                        </tr>
+                        <tr class="menu-row" data-category="Drinks">
+                            <td>🥛 Cappuccino</td>
+                            <td><span class="category">Drinks</span></td>
+                            <td>$5</td>
+                        </tr>
+                        <tr class="menu-row" data-category="Pastries">
+                            <td>🍰 Chocolate Cake</td>
+                            <td><span class="category">Pastries</span></td>
+                            <td>$6</td>
+                        </tr>
+                        <tr class="menu-row" data-category="Drinks">
+                            <td>🧊 Iced Coffee</td>
+                            <td><span class="category">Drinks</span></td>
+                            <td>$4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Task 4: Interactive Order Total -->
+        <section class="section">
+            <div class="section-heading">
+                <p class="small-heading">YOUR FAVORITES</p>
+                <h2>Build Your Order</h2>
+                <p>Select the items you would like to order.</p>
+            </div>
+
+            <div class="order-grid">
+                <label class="order-item">
+                    <input type="checkbox" class="food" value="3">
+                    <span class="food-icon">☕</span>
+                    <span class="food-info"><strong>Espresso</strong><small>Rich and classic</small></span>
+                    <strong class="price">$3</strong>
+                </label>
+
+                <label class="order-item">
+                    <input type="checkbox" class="food" value="4">
+                    <span class="food-icon">🥐</span>
+                    <span class="food-info"><strong>Croissant</strong><small>Freshly baked</small></span>
+                    <strong class="price">$4</strong>
+                </label>
+
+                <label class="order-item">
+                    <input type="checkbox" class="food" value="5">
+                    <span class="food-icon">🥛</span>
+                    <span class="food-info"><strong>Cappuccino</strong><small>Smooth and creamy</small></span>
+                    <strong class="price">$5</strong>
+                </label>
+
+                <label class="order-item">
+                    <input type="checkbox" class="food" value="6">
+                    <span class="food-icon">🍰</span>
+                    <span class="food-info"><strong>Chocolate Cake</strong><small>A sweet treat</small></span>
+                    <strong class="price">$6</strong>
+                </label>
+            </div>
+
+            <div class="total-box">
+                <span>Your Order Total</span>
+                <strong>$<span id="total">0</span></strong>
+            </div>
+        </section>
+
+        <!-- Task 6: Read More Toggle -->
+        <section class="about-section">
+            <div class="about-icon">☕</div>
+            <div class="about-content">
+                <p class="small-heading">OUR STORY</p>
+                <h2>A Little Cup of Comfort</h2>
+                <p>
+                    The Coffee House is a friendly place where every cup
+                    brings people together. We believe good coffee makes
+                    every day a little better.
+                </p>
+
+                <p id="extra-text" hidden>
+                    From freshly brewed coffee to delicious pastries,
+                    we prepare everything with care. Whether you are
+                    studying, working or meeting friends, you will
+                    always find a warm welcome here.
+                </p>
+
+                <button id="read-button" class="primary-button">Read More +</button>
+            </div>
+        </section>
+
+        <!-- Task 1 and Task 5: Form, Age Verification and Task 9: Character Counter -->
+        <section class="section contact-section">
+            <div class="section-heading">
+                <p class="small-heading">WE WOULD LOVE TO HEAR FROM YOU</p>
+                <h2>Get in Touch</h2>
+                <p>Send us a message or share a special request.</p>
+            </div>
+
+            <form id="contact-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="username">Your Name</label>
+                        <input type="text" id="username" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="birth-year">Birth Year</label>
+                        <input type="text" id="birth-year" placeholder="e.g. 2002" required>
+                        <small>Enter your four-digit birth year for age verification.</small>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="special-notes">Special Requests</label>
+                        <textarea id="special-notes" maxlength="100"
+                            placeholder="Any special instructions? (Maximum 100 characters)"></textarea>
+                        <div id="char-count">100 characters remaining</div>
+                    </div>
+                </div>
+
+                <button type="submit" class="primary-button">Send Message →</button>
+            </form>
+
+            <div id="message" class="result-message" aria-live="polite"></div>
+            <div id="age-result" class="result-message" aria-live="polite"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>☕ The Coffee House</h3>
+        <p>Made with love, served with a smile.</p>
+        <p class="footer-bottom">Web Engineering — Assignment 3 | JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
